@@ -1,4 +1,6 @@
 import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -7,18 +9,36 @@ import java.io.IOException;
  * Created by block7 on 3/28/17.
  */
 public class FacialRecognitionMain {
-    BufferedImage img = null;
+//    static BufferedImage img = null;
+
+    JFrame mainFrame;
+    ImagePanel mainPanel;
 
     public FacialRecognitionMain() {
-        try {
-            img = ImageIO.read(new File("NaturePatterns08.jpg"));
+        mainFrame = new JFrame();
 
-        } catch (IOException e) {
+        mainPanel = new ImagePanel();
+        mainFrame.setContentPane(mainPanel);
 
-        }
+        mainFrame.setVisible(true);
+
+
     }
 
+//    public void loadImage() {
+//        try {
+//            img = ImageIO.read(new File("NaturePatterns08.jpg"));
+//            System.out.println("image loaded");
+//
+//        } catch (IOException e) {
+//            System.out.println(e);
+//
+//        }
+//    }
 
-
-
+    public static void main(String[] args) {
+        FacialRecognitionMain rec = new FacialRecognitionMain();
+        ImagePanel image = new ImagePanel();
+//        rec.loadImage();
+    }
 }
