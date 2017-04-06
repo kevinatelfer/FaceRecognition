@@ -9,7 +9,8 @@ import java.io.IOException;
  * Created by block7 on 3/28/17.
  */
 public class FacialRecognitionMain {
-//    static BufferedImage img = null;
+    static BufferedImage imgMain = null;
+    int[] rgbArrayMain;
 
     JFrame mainFrame;
     ImagePanel mainPanel;
@@ -39,6 +40,12 @@ public class FacialRecognitionMain {
     public static void main(String[] args) {
         FacialRecognitionMain rec = new FacialRecognitionMain();
         ImagePanel image = new ImagePanel();
+        image.analyzeRGB();
+        rec.rgbArrayMain = image.rgbArray;
+        System.out.println(rec.rgbArrayMain);
+
+
+//        imgMain = image.img;
 //        rec.loadImage();
     }
 }
