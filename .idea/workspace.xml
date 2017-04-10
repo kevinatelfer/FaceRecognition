@@ -5,8 +5,10 @@
     <list default="true" id="947376d2-da3a-4f88-98a0-a49731e502f3" name="Default" comment="" />
 =======
     <list default="true" id="9fdd6ccd-9e88-4ed2-af67-099abc1940ec" name="Default" comment="tryed stuff">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ImageCalc.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MyImage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FaceRecognition/ImagePanel.class" afterPath="$PROJECT_DIR$/out/production/FaceRecognition/ImagePanel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FacialRecognitionMain.java" afterPath="$PROJECT_DIR$/src/FacialRecognitionMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ImagePanel.java" afterPath="$PROJECT_DIR$/src/ImagePanel.java" />
     </list>
     <ignored path="FaceRecognition.iws" />
@@ -34,7 +36,7 @@
       <file leaf-file-name="FacialRecognitionMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
+            <state relative-caret-position="70">
               <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -43,15 +45,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImagePanel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImagePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ImagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+            <state relative-caret-position="173">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
 >>>>>>> origin/master
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyImage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MyImage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+              <folding>
+                <element signature="e#282#283#0" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageCalc.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ImageCalc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,16 +103,23 @@
       <list>
         <option value="$PROJECT_DIR$/src/FacialRecognitionMain.java" />
         <option value="$PROJECT_DIR$/src/ImagePanel.java" />
+        <option value="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/classes.jar!/javax/imageio/ImageIO.class" />
+        <option value="$PROJECT_DIR$/src/MyImage.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <option name="width" value="1346" />
     <option name="height" value="688" />
 =======
     <option name="x" value="127" />
     <option name="y" value="46" />
+=======
+    <option name="x" value="153" />
+    <option name="y" value="23" />
+>>>>>>> origin/master
     <option name="width" value="1562" />
     <option name="height" value="977" />
   </component>
@@ -118,8 +150,12 @@
     </navigator>
     <panes>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <pane id="PackagesPane" />
+>>>>>>> origin/master
+=======
+      <pane id="Scope" />
 >>>>>>> origin/master
       <pane id="ProjectPane">
         <subPane>
@@ -169,10 +205,14 @@
       </pane>
       <pane id="Scratches" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="PackagesPane" />
 =======
 >>>>>>> origin/master
       <pane id="Scope" />
+=======
+      <pane id="PackagesPane" />
+>>>>>>> origin/master
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -476,6 +516,7 @@
   </component>
   <component name="ToolWindowManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="0" y="0" width="1346" height="688" extended-state="0" />
     <editor active="true" />
     <layout>
@@ -508,6 +549,10 @@
 =======
     <frame x="127" y="46" width="1562" height="977" extended-state="0" />
     <editor active="false" />
+=======
+    <frame x="153" y="23" width="1562" height="977" extended-state="0" />
+    <editor active="true" />
+>>>>>>> origin/master
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -517,11 +562,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.02202643" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2900128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2900128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -552,7 +597,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="tryed stuff" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -563,10 +610,53 @@
     <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
 =======
+=======
+        <state relative-caret-position="150">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ImagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ImagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> origin/master
         <state relative-caret-position="525">
           <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
           <folding>
@@ -623,14 +713,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/classes.jar!/javax/imageio/ImageIO.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-856">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ImageCalc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="170">
           <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
           <folding />
 =======
         <state relative-caret-position="116">
+=======
+        <state relative-caret-position="70">
+>>>>>>> origin/master
           <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -640,12 +750,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ImagePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+        <state relative-caret-position="173">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
 >>>>>>> origin/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+          <folding>
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
