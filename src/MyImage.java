@@ -1,4 +1,5 @@
 import java.awt.image.BufferedImage;
+import java.lang.reflect.Array;
 
 /**
  * Created by block7 on 4/10/17.
@@ -12,7 +13,7 @@ public class MyImage {
     }
 
     public BufferedImage loadImage() {
-
+        return img;
     }
 
     public BufferedImage getImage() {
@@ -23,14 +24,8 @@ public class MyImage {
 
     }
 
-    public void getArray() {
-        //return rgbArray;
-
+    public int[] getArray() {
+        return rgbArray;
     }
-
-
-
-
-
 
 }

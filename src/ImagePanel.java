@@ -10,11 +10,7 @@ import java.io.IOException;
  */
 public class ImagePanel extends JPanel {
     BufferedImage img = null;
-
-//    int w = img.getWidth();
-//    int h = img.getHeight();
     int[] rgbArray = new int[100];
-//    Color  c = new Color(rgbArray[10]);
 
     public ImagePanel() {
         try {
@@ -37,9 +33,10 @@ public class ImagePanel extends JPanel {
 
     public void analyzeRGB() {
         img.getRGB(0,0,10,10,rgbArray,0,1);
-        System.out.println("type " + img.getType());
-        img = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_ARGB);
-        System.out.println("type2 " + img.getType());
+//        System.out.println("type " + img.getType());
+//
+//        img = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_ARGB);
+//        System.out.println("type2 " + img.getType());
         for (int i = 0; i <rgbArray.length; i++) {
             System.out.print(rgbArray[i] + ",");
         }
@@ -50,6 +47,5 @@ public class ImagePanel extends JPanel {
 //        System.out.println(c.getBlue());
 //        System.out.println(c.getAlpha());
     }
-
 
 }

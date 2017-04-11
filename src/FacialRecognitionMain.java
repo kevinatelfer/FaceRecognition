@@ -26,16 +26,7 @@ public class FacialRecognitionMain {
 
     }
 
-//    public void loadImage() {
-//        try {
-//            img = ImageIO.read(new File("NaturePatterns08.jpg"));
-//            System.out.println("image loaded");
-//
-//        } catch (IOException e) {
-//            System.out.println(e);
-//
-//        }
-//    }
+
 
     public static void main(String[] args) {
         FacialRecognitionMain rec = new FacialRecognitionMain();
@@ -45,7 +36,5 @@ public class FacialRecognitionMain {
         System.out.println(rec.rgbArrayMain);
 
 
-//        imgMain = image.img;
-//        rec.loadImage();
     }
 }
