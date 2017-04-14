@@ -27,7 +27,7 @@ public class FacialRecognitionMain {
     }
 
 
-
+    
     public static void main(String[] args) {
         FacialRecognitionMain rec = new FacialRecognitionMain();
         ImagePanel image = new ImagePanel();
