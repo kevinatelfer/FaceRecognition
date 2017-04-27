@@ -8,22 +8,21 @@ import java.lang.reflect.Array;
  */
 public class MyImage {
     BufferedImage img = null;
-    int[] rgbArray = new int[100];
+    int[] rgbArray;
 
     public MyImage() {
 
     }
 
-    public BufferedImage loadImage() {
+    public void loadImage(String path) {
         try {
-            img = ImageIO.read(ImagePanel.class.getResource("/resources/images/NaturePatterns08copy.jpg"));
+            img = ImageIO.read(ImagePanel.class.getResource(path));
             System.out.println("image loaded");
 
         } catch (IOException e) {
             System.out.println(e);
 
         }
-        return img;
     }
 
     public BufferedImage getImage() {
@@ -31,7 +30,7 @@ public class MyImage {
     }
 
     public void readImage() {
-
+        
     }
 
     public int[] getArray() {
