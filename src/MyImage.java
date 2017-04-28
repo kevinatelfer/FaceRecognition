@@ -30,7 +30,7 @@ public class MyImage {
     }
 
     public void readImage() {
-        
+
     }
 
     public int[] getArray() {
