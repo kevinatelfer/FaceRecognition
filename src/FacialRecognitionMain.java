@@ -23,18 +23,14 @@ public class FacialRecognitionMain {
 
         mainFrame.setVisible(true);
 
-
     }
 
 
     
     public static void main(String[] args) {
+        MyImage myImage = new MyImage();
         FacialRecognitionMain rec = new FacialRecognitionMain();
-        ImagePanel image = new ImagePanel();
-        image.analyzeRGB();
-        rec.rgbArrayMain = image.rgbArray;
         System.out.println(rec.rgbArrayMain);
-
 
     }
 }

@@ -8,9 +8,16 @@ import java.lang.reflect.Array;
  */
 public class MyImage {
     BufferedImage img = null;
-    int[] rgbArray;
+    int w;
+    int h;
+    int[][][] rgbArray = new int[h][w][3];
 
     public MyImage() {
+        loadImage("/resources/images/NaturePatterns08copy.jpg");
+        this.w = img.getWidth();
+        this.h = img.getHeight();
+        System.out.println("width " + w);
+        System.out.println("height " + h);
 
     }
 
@@ -33,7 +40,7 @@ public class MyImage {
 
     }
 
-    public int[] getArray() {
+    public int[][][] getArray() {
         return rgbArray;
     }
 
