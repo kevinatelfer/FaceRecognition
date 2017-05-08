@@ -31,6 +31,7 @@ public class FacialRecognitionMain {
         MyImage myImage = new MyImage();
         FacialRecognitionMain rec = new FacialRecognitionMain();
         System.out.println(rec.rgbArrayMain);
+        System.out.println(myImage.readImage(myImage.img));
 
     }
 }
