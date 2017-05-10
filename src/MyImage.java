@@ -16,13 +16,14 @@ public class MyImage {
 
     public MyImage() {
         loadImage("/resources/images/NaturePatterns08copy.jpg");
-        rgbArray = new double[h][w][3];
+
 //        int[] pixels = ((DataBufferInt) img.getRaster().getDataBuffer()).getData();
 //        System.out.println(pixels);
         this.w = img.getWidth();
         this.h = img.getHeight();
         System.out.println("width " + w);
         System.out.println("height " + h);
+        rgbArray = new double[h][w][3];
 
 
     }
@@ -43,6 +44,7 @@ public class MyImage {
     }
 
     public double[][][] readImage(BufferedImage image) {
+        image = new BufferedImage(w,h,BufferedImage.TYPE_INT_RGB);
         boolean hasAlpha = image.getColorModel().hasAlpha() != false;
 
         int[] pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
@@ -60,11 +62,16 @@ public class MyImage {
         for (int i = 0; i < pixels.length; i++) {
             color[0] = ((pixels[i] >> 16) & 0xff); //red
             color[1] = ((pixels[i] >> 8) & 0xff); //green
-            color[0] = (pixels[i] & 0xff); //blue
+            color[2] = (pixels[i] & 0xff); //blue
             for (int j = 0; j < 3; j++) {
                 double A = (x > 0 && y > 0) ? rgbArray[y-1][x-1][j] : 0;
                 double B = (x > 0) ? rgbArray[y][x-1][j] : 0;
                 double C = (y > 0) ? rgbArray[y-1][x][j] : 0;
+//                System.out.println("x" + x);
+//                System.out.println("y" + y);
+//                System.out.println("j" + j);
+//                System.out.println(rgbArray.length);
+//                System.out.println(color.length);
                 rgbArray[y][x][j] = - A + B + C + color[j];
             }
             x++;
@@ -72,12 +79,15 @@ public class MyImage {
                 x = 0;
                 y++;
             }
+
         }
         return  rgbArray;
     }
 
-//    public double[][][] getArray() {
-//        return rgbArray;
-//    }
+    public void printArray(double[][][] array) {
+//        for (int i = 0; i <) {
+//
+//        }
+    }
 
 }
