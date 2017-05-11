@@ -48,7 +48,9 @@ public class MyImage {
         boolean hasAlpha = image.getColorModel().hasAlpha() != false;
 
         int[] pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
-        System.out.println(pixels);
+        for (int i = 0; i < pixels.length; i++){
+            System.out.println(pixels[i]);
+        }
 
         int pixelSize = hasAlpha?4:3;
         int pixelOffset = hasAlpha?1:0;
@@ -61,8 +63,11 @@ public class MyImage {
 
         for (int i = 0; i < pixels.length; i++) {
             color[0] = ((pixels[i] >> 16) & 0xff); //red
+//            System.out.println("color 0 " + color[0]);
             color[1] = ((pixels[i] >> 8) & 0xff); //green
+//            System.out.println("color 1 " + color[1]);
             color[2] = (pixels[i] & 0xff); //blue
+//            System.out.println("color 2 " + color[2]);
             for (int j = 0; j < 3; j++) {
                 double A = (x > 0 && y > 0) ? rgbArray[y-1][x-1][j] : 0;
                 double B = (x > 0) ? rgbArray[y][x-1][j] : 0;
@@ -72,6 +77,7 @@ public class MyImage {
 //                System.out.println("j" + j);
 //                System.out.println(rgbArray.length);
 //                System.out.println(color.length);
+//                System.out.println("individual color " + color[j]);
                 rgbArray[y][x][j] = - A + B + C + color[j];
             }
             x++;
@@ -81,13 +87,20 @@ public class MyImage {
             }
 
         }
+//        printArray(rgbArray);
         return  rgbArray;
     }
 
     public void printArray(double[][][] array) {
-//        for (int i = 0; i <) {
-//
-//        }
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++){
+                for (int k = 0; k < 3; k++) {
+                    System.out.print("arr[" + i + "][" + j + "][" + k + "] = " + rgbArray[i][j][k] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
     }
 
 }
