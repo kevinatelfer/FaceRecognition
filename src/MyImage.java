@@ -50,9 +50,10 @@ public class MyImage {
         boolean hasAlpha = image.getColorModel().hasAlpha() != false;
 
         byte[] pixels = ((DataBufferByte) image.getRaster().getDataBuffer()).getData();
-//        for (int i = 0; i < pixels.length; i++){
+        for (int i = 0; i < pixels.length; i++){
 //            System.out.println(pixels[i]);
-//        }
+            System.out.println(String.format("%06X", pixels[i]));
+        }
 
         int pixelSize = hasAlpha?4:3;
         int pixelOffset = hasAlpha?1:0;
@@ -65,6 +66,7 @@ public class MyImage {
 
         System.out.println("pix leng " + pixels.length);
         for (int i = 0; i < pixels.length; i++) {
+//            System.out.println(String.format("%06X", pixels[i]));
             color[0] = ((pixels[i] >> 16) & 0xff); //red
 //            System.out.println("color 0 " + color[0]);
             color[1] = ((pixels[i] >> 8) & 0xff); //green

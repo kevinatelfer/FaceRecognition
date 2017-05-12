@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccacaf08-2bb2-4643-93f6-f02e278bd78c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/KevFace.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/SmallKev.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/ThreeColor.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FaceRecognition/MyImage.class" afterPath="$PROJECT_DIR$/out/production/FaceRecognition/MyImage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyImage.java" afterPath="$PROJECT_DIR$/src/MyImage.java" />
     </list>
@@ -23,7 +19,7 @@
       <file leaf-file-name="FacialRecognitionMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
+            <state relative-caret-position="476">
               <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
               <folding />
             </state>
@@ -34,8 +30,9 @@
         <entry file="file://$PROJECT_DIR$/src/ImagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
               </folding>
             </state>
@@ -45,8 +42,8 @@
       <file leaf-file-name="MyImage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+            <state relative-caret-position="105">
+              <caret line="52" column="48" lean-forward="true" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,7 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -160,6 +156,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
@@ -419,7 +416,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -432,7 +429,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22082019" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.72239745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -474,9 +471,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ImagePanel.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ImagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -505,6 +532,7 @@
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -533,6 +561,7 @@
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -561,6 +590,7 @@
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -589,6 +619,7 @@
         <state relative-caret-position="170">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -617,6 +648,7 @@
         <state relative-caret-position="272">
           <caret line="16" column="106" lean-forward="false" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="106" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -645,6 +677,7 @@
         <state relative-caret-position="170">
           <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="22" selection-end-column="9" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -673,6 +706,7 @@
         <state relative-caret-position="170">
           <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="22" selection-end-column="9" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -701,6 +735,7 @@
         <state relative-caret-position="170">
           <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="22" selection-end-column="9" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -729,6 +764,7 @@
         <state relative-caret-position="255">
           <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="22" selection-end-column="9" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -775,7 +811,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
+        <state relative-caret-position="476">
           <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
           <folding />
         </state>
@@ -784,8 +820,9 @@
     <entry file="file://$PROJECT_DIR$/src/ImagePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1493663797202" expanded="true" signature="314:447" ph="..." />
           </folding>
         </state>
@@ -793,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+        <state relative-caret-position="105">
+          <caret line="52" column="48" lean-forward="true" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
