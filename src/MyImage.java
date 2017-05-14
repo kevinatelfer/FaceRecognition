@@ -1,4 +1,5 @@
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
@@ -12,22 +13,24 @@ public class MyImage {
     BufferedImage img = null;
     int w;
     int h;
+    int adjustedW;
+    int adjustedH;
     double[][][] rgbArray;
+    int[][] result;
 //    int[] pixels;
 
     public MyImage() {
 //        loadImage("/resources/images/NaturePatterns08copy.jpg");
         loadImage("/resources/images/ThreeColor.jpg");
 
-//        int[] pixels = ((DataBufferInt) img.getRaster().getDataBuffer()).getData();
-//        System.out.println(pixels);
         this.w = img.getWidth();
         this.h = img.getHeight();
+        adjustedH = h / 6;
+        adjustedW = w / 6;
         System.out.println("width " + w);
         System.out.println("height " + h);
         rgbArray = new double[3*h][w][3];
-
-
+        result = new int[h][w];
     }
 
     public void loadImage(String path) {
@@ -45,9 +48,36 @@ public class MyImage {
     return img;
     }
 
+    public int getAdjustedW() {
+        return adjustedW;
+    }
+
+    public int getAdjustedH() {
+        return adjustedH;
+    }
+
+    public int[][] readImageWithGetRGB(BufferedImage image) {
+        Color myColor;
+
+        int[] color = new int[3];
+        for (int i = 0; i < h; i++){
+            for (int j = 0; j < w; j++) {
+                myColor = new Color(image.getRGB(j,i));
+                color[0] = myColor.getRed();
+                color[1] = myColor.getGreen();
+                color[2] = myColor.getBlue();
+                for (int k = 0; k < 3; k++ ) {
+                    rgbArray[i][j][k] = color[k];
+                }
+            }
+        }
+        print3DArray(rgbArray);
+        return result;
+    }
+
     public double[][][] readImage(BufferedImage image) {
 //        image = new BufferedImage(w,h,BufferedImage.TYPE_INT_RGB);
-        boolean hasAlpha = image.getColorModel().hasAlpha() != false;
+        boolean hasAlpha = image.getAlphaRaster() != null;
 
         byte[] pixels = ((DataBufferByte) image.getRaster().getDataBuffer()).getData();
         for (int i = 0; i < pixels.length; i++){
@@ -74,13 +104,6 @@ public class MyImage {
             color[2] = (pixels[i] & 0xff); //blue
 //            System.out.println("color 2 " + color[2]);
             for (int j = 0; j < 3; j++) {
-//                double A = (x > 0 && y > 0) ? rgbArray[y-1][x-1][j] : 0;
-//                double B = (x > 0) ? rgbArray[y][x-1][j] : 0;
-//                double C = (y > 0) ? rgbArray[y-1][x][j] : 0;
-//                System.out.println("x" + x);
-//                System.out.println("y" + y);
-//                System.out.println("j" + j);
-
 //                System.out.println("color j " + color[j]);
 //                rgbArray[y][x][j] = - A + B + C + color[j];
                 rgbArray[y][x][j] = color[j];
@@ -90,19 +113,27 @@ public class MyImage {
                 x = 0;
                 y++;
             }
-
         }
-        printArray(rgbArray);
+        print3DArray(rgbArray);
         return  rgbArray;
     }
 
-    public void printArray(double[][][] array) {
+    public void print3DArray(double[][][] array) {
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < w; j++){
                 for (int k = 0; k < 3; k++) {
                     System.out.print("arr[" + i + "][" + j + "][" + k + "] = " + rgbArray[i][j][k] + " ");
                 }
                 System.out.println();
+            }
+            System.out.println();
+        }
+    }
+
+    public void print2DArray(int[][] array) {
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                System.out.print("arr[" + i + "][" + j + "] = " + result[i][j] + " ");
             }
             System.out.println();
         }

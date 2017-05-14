@@ -17,7 +17,12 @@ public class ImagePanel extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        g.drawImage(myImage.getImage(), 0, 0, null);
+        g.drawImage(myImage.getImage(), 100, 100, myImage.getAdjustedW(), myImage.getAdjustedH(), null);
+
+    }
+
+    public void drawTestImg(Graphics g, BufferedImage image) {
+        g.drawImage(image, 100, 100, myImage.getAdjustedW(), myImage.getAdjustedH(), null);
     }
 
 }
