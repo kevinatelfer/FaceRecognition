@@ -10,19 +10,21 @@ import java.io.IOException;
  */
 public class ImagePanel extends JPanel {
     MyImage myImage = new MyImage();
+//    FacialRecognitionMain rec = new FacialRecognitionMain();
 
     public ImagePanel() {
     }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-
-        g.drawImage(myImage.getImage(), 100, 100, myImage.getAdjustedW(), myImage.getAdjustedH(), null);
-
+        if (FacialRecognitionMain.draw1 == true) {
+//            myImage.loadImage("/resources/images/ThreeColor.jpg");
+            g.drawImage(myImage.getSourceImg(), 100, 100, myImage.getSourceW(), myImage.getSourceH(), null);
+        }
     }
 
-    public void drawTestImg(Graphics g, BufferedImage image) {
-        g.drawImage(image, 100, 100, myImage.getAdjustedW(), myImage.getAdjustedH(), null);
-    }
+//    public void drawTestImg(Graphics g, BufferedImage image) {
+//        g.drawImage(image, 100, 100, myImage.getAdjustedW(), myImage.getAdjustedH(), null);
+//    }
 
 }
