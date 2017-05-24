@@ -10,22 +10,22 @@ import java.lang.reflect.Array;
  * Created by block7 on 4/10/17.
  */
 public class MyImage {
-    BufferedImage sourceImg = null;
-    BufferedImage testImg = null;
-    int sourceW;
-    int sourceH;
-    int testW;
-    int testH;
+    static BufferedImage sourceImg = null;
+    static BufferedImage testImg = null;
+    static int sourceW;
+    static int sourceH;
+    static int testW;
+    static int testH;
 //    int adjustedW;
 //    int adjustedH;
-    int[][][] sourceRGBArray;
-    int[][][] testRGBArray;
+    static int[][][] sourceRGBArray;
+    static int[][][] testRGBArray;
 //    int[][] result;
 //    int[] pixels;
 
     public MyImage() {
-        loadSourceImage("/resources/images/ThreeColor.jpg");
-        loadTestImage("/resources/images/ThreeColor.jpg");
+        loadSourceImage("/resources/images/TinyImage.jpg");
+        loadTestImage("/resources/images/TinyImageComp.jpg");
 
         this.sourceW = sourceImg.getWidth();
         this.sourceH = sourceImg.getHeight();
@@ -42,7 +42,7 @@ public class MyImage {
 //        result = new int[h][w];
     }
 
-    public void loadSourceImage(String path) {
+    public static void loadSourceImage(String path) {
         try {
             sourceImg = ImageIO.read(ImagePanel.class.getResource(path));
             System.out.println("image loaded");
@@ -53,7 +53,7 @@ public class MyImage {
         }
     }
 
-    public void loadTestImage(String path) {
+    public static void loadTestImage(String path) {
         try {
             testImg = ImageIO.read(ImagePanel.class.getResource(path));
             System.out.println("image loaded");
@@ -104,10 +104,11 @@ public class MyImage {
 //        return adjustedH;
 //    }
 
-    public int[][][] readImageWithGetRGB(BufferedImage image, int h, int w, int[][][] rgbArray) {
+    public static int[][][] readImageWithGetRGB(BufferedImage image, int h, int w, int[][][] rgbArray) {
         Color myColor;
 
         int[] color = new int[3];
+
         for (int i = 0; i < h; i++){
             for (int j = 0; j < w; j++) {
                 myColor = new Color(image.getRGB(j,i));
@@ -166,7 +167,7 @@ public class MyImage {
 //        return  rgbArray;
 //    }
 
-    public void print3DArray(int[][][] rgbArray, int h, int w) {
+    public static void print3DArray(int[][][] rgbArray, int h, int w) {
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < w; j++){
                 for (int k = 0; k < 3; k++) {

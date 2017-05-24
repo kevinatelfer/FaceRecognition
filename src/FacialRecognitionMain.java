@@ -23,24 +23,31 @@ public class FacialRecognitionMain implements ActionListener {
     static boolean draw1 = false;
 
     public FacialRecognitionMain() {
-        ImagePanel panel = new ImagePanel();
         mainFrame = new JFrame();
-        mainFrame.setLayout(null);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setSize(500,400);
 
+
+        ImagePanel panel = new ImagePanel();
         mainPanel = new ImagePanel();
         mainFrame.setContentPane(mainPanel);
         mainPanel.setBackground(Color.BLACK);
 
+        mainFrame.setLayout(null);
+
         box1 = new JComboBox(imageList);
-        box1.setLocation(5,10);
-        box1.setSize(60,25);
+        box1.setBounds(50,20,70,20);
+//        box1.setLocation(5,10);
+//        box1.setSize(60,25);
         mainPanel.add(box1);
+        box1.addActionListener(this);
 
         mainFrame.setVisible(true);
     }
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == box1) {
             choice = box1.getSelectedItem().toString();
+            System.out.println("choice " + choice);
             setDrawTrue();
         }
 
@@ -64,8 +71,10 @@ public class FacialRecognitionMain implements ActionListener {
 //        System.out.println(myImage.readImageWithGetRGB(myImage.getSourceImg(), myImage.getSourceH(),myImage.getSourceW(), myImage.getSourceRGBArray()));
 //        System.out.println(myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray()));
         myImage.readImageWithGetRGB(myImage.getSourceImg(), myImage.getSourceH(),myImage.getSourceW(), myImage.getSourceRGBArray());
+        System.out.println("Test Image:");
         myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
-//        calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), myImage.getSourceH(), myImage.getSourceW());
+//        System.out.println("reading finished");
+        calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), myImage.getSourceH(), myImage.getSourceW());
 
 
     }

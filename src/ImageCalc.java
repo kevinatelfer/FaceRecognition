@@ -2,15 +2,28 @@
  * Created by block7 on 4/10/17.
  */
 public class ImageCalc {
-    int diffRed;
-    int diffGreen;
-    int diffBlue;
+//    int diffRed;
+//    int diffGreen;
+//    int diffBlue;
     int colorDiff;
     public void simpleCompare(int[][][] source, int[][][] test, int h, int w) {
+        System.out.println("calc start");
+//        System.out.println(source.length);
+//        System.out.println(test.length);
+//        System.out.println("h " + h);
+//        System.out.println("w " + w);
+//        System.out.println("000 " + source[0][0][0]);
         for (int i = 0; i < h; i++){
+//            System.out.println("i " + i);
             for (int j = 0; j < w; j++) {
+//                System.out.println("j " + j);
                 for (int k = 0; k < 3; k++ ) {
-                    colorDiff = colorDiff + (source[h][w][k] - test[h][w][k])*(source[h][w][k] - test[h][w][k]);
+//                    System.out.println("i " + i);
+//                    System.out.println("j " + j);
+//                    System.out.println("k " + k);
+//                    System.out.println("length " + source.length);
+//                    System.out.println(source[h][w][k]);
+                    colorDiff = colorDiff + (source[i][j][k] - test[i][j][k])*(source[i][j][k] - test[i][j][k]);
                     //                    if (k == 0) {//red
 //                        diffRed = Math.pow(source[h][w][k] - test[h][w][k], 2);
 //                    }
@@ -23,6 +36,7 @@ public class ImageCalc {
 //
 //                    }
                 }
+//                System.out.println(colorDiff);
             }
         }
         System.out.println(colorDiff);

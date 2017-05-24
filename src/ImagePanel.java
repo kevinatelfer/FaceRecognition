@@ -9,7 +9,6 @@ import java.io.IOException;
  * Created by block7 on 4/3/17.
  */
 public class ImagePanel extends JPanel {
-    MyImage myImage = new MyImage();
 //    FacialRecognitionMain rec = new FacialRecognitionMain();
 
     public ImagePanel() {
@@ -17,9 +16,9 @@ public class ImagePanel extends JPanel {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        if (FacialRecognitionMain.draw1 == true) {
+        if (FacialRecognitionMain.draw1) {
 //            myImage.loadImage("/resources/images/ThreeColor.jpg");
-            g.drawImage(myImage.getSourceImg(), 100, 100, myImage.getSourceW(), myImage.getSourceH(), null);
+            g.drawImage(MyImage.sourceImg, 100, 100, MyImage.sourceW, MyImage.sourceH, null);
         }
     }
 
