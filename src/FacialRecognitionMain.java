@@ -88,6 +88,6 @@ public class FacialRecognitionMain implements ActionListener {
 //        System.out.println("Test Image:");
 //        myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
 //        calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), myImage.getSourceH(), myImage.getSourceW());
-        myImage.resizeDimensions();
+//        myImage.resizeDimensions();
     }
 }
