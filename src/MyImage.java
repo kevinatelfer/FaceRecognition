@@ -16,16 +16,19 @@ public class MyImage {
     static int sourceH;
     static int testW;
     static int testH;
-//    int adjustedW;
-//    int adjustedH;
+    static int resizeSourceH;
+    static int resizeSourceW;
+    static int resizeTestH;
+    static int resizeTestW;
+
     static int[][][] sourceRGBArray;
     static int[][][] testRGBArray;
 //    int[][] result;
 //    int[] pixels;
 
     public MyImage() {
-        loadSourceImage("/resources/images/TinyImage.jpg");
-        loadTestImage("/resources/images/TinyImageComp.jpg");
+        loadSourceImage("/resources/images/KevSource.jpg");
+        loadTestImage("/resources/images/KevTest.jpg");
 
         this.sourceW = sourceImg.getWidth();
         this.sourceH = sourceImg.getHeight();
@@ -63,6 +66,24 @@ public class MyImage {
 
         }
     }
+
+//    public void resizeDimensions() {
+//        boolean done = true;
+//        int i = 1;
+//        int j = 1;
+//        while (!(sourceW*i == 400) || i*sourceH > 500 || i*sourceH > 500) {
+//            i++;
+//            System.out.println("i" + i);
+//        }
+//        while (!(testW*j < 400 || j*testH > 500 || i*sourceH > 500)) {
+//            j++;
+//        }
+//        resizeSourceW = sourceW*i;
+//        resizeSourceH = sourceH*i;
+//        resizeTestW = resizeTestW*j;
+//        resizeTestH = resizeTestH*j;
+//    }
+
 
     public BufferedImage getSourceImg() {
         return sourceImg;

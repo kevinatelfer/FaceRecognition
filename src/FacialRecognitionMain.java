@@ -29,7 +29,6 @@ public class FacialRecognitionMain implements ActionListener {
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setSize(1000,700);
 
-
         ImagePanel panel = new ImagePanel();
         mainPanel = new ImagePanel();
         mainFrame.setContentPane(mainPanel);
@@ -55,6 +54,7 @@ public class FacialRecognitionMain implements ActionListener {
 
         mainFrame.setVisible(true);
     }
+
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == box1) {
             choice = box1.getSelectedItem().toString();
@@ -88,5 +88,6 @@ public class FacialRecognitionMain implements ActionListener {
 //        System.out.println("Test Image:");
 //        myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
 //        calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), myImage.getSourceH(), myImage.getSourceW());
+        myImage.resizeDimensions();
     }
 }

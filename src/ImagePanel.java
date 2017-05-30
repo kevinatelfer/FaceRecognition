@@ -21,7 +21,9 @@ public class ImagePanel extends JPanel {
         g.drawLine(750,0,750,700);
         if (FacialRecognitionMain.draw1) {
 //            myImage.loadImage("/resources/images/ThreeColor.jpg");
-            g.drawImage(MyImage.sourceImg, 100, 100, MyImage.sourceW, MyImage.sourceH, null);
+//            g.drawImage(MyImage.sourceImg, 50, 200, MyImage.resizeSourceW, MyImage.resizeSourceH, null);
+//            System.out.println("rw " + MyImage.resizeSourceW);
+//            System.out.println("rw" + MyImage.resizeSourceH);
         }
     }
 
