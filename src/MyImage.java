@@ -40,9 +40,10 @@ public class MyImage {
         System.out.println("source height " + sourceH);
         System.out.println("test width " + testW);
         System.out.println("test height " + testH);
-        sourceRGBArray = new int[3*sourceH][sourceW][3];
-        testRGBArray = new int[3*testH][testW][3];
-//        result = new int[h][w];
+        sourceRGBArray = new int[3*520][451][3];
+        testRGBArray = new int[3*520][451][3];
+//        sourceRGBArray = new int[3*sourceH][sourceW][3];
+//        testRGBArray = new int[3*testH][testW][3];
     }
 
     public static void loadSourceImage(String path) {
@@ -117,31 +118,30 @@ public class MyImage {
         return testW;
     }
 
-//    public int getAdjustedW() {
-//        return adjustedW;
-//    }
-//
-//    public int getAdjustedH() {
-//        return adjustedH;
-//    }
-
     public static int[][][] readImageWithGetRGB(BufferedImage image, int h, int w, int[][][] rgbArray) {
         Color myColor;
+//        h = 560;
+//        w = 865;
+//        sourceRGBArray = new int[3*520][450][3];
+//        testRGBArray = new int[3*520][450][3];
+//        sourceRGBArray = new int[3*sourceH][sourceW][3];
+//        testRGBArray = new int[3*testH][testW][3];
 
         int[] color = new int[3];
 
-        for (int i = 0; i < h; i++){
-            for (int j = 0; j < w; j++) {
+        for (int i = 40; i < h; i++){
+            for (int j = 415; j < w; j++) {
                 myColor = new Color(image.getRGB(j,i));
                 color[0] = myColor.getRed();
                 color[1] = myColor.getGreen();
                 color[2] = myColor.getBlue();
                 for (int k = 0; k < 3; k++ ) {
-                    rgbArray[i][j][k] = color[k];
+                    System.out.println("i: " + i + "j: " + j + "k: " + k);
+                    rgbArray[i - 40][j - 415][k] = color[k];
                 }
             }
         }
-        print3DArray(rgbArray, h, w);
+        print3DArray(rgbArray, 561, 866);
         return rgbArray;
     }
 
