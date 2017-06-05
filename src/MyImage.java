@@ -27,8 +27,8 @@ public class MyImage {
 //    int[] pixels;
 
     public MyImage() {
-        loadSourceImage("/resources/images/KevSource.jpg");
-        loadTestImage("/resources/images/KevTest.jpg");
+//        loadSourceImage("KevSource");
+//        loadTestImage("DadSource");
 
         this.sourceW = sourceImg.getWidth();
         this.sourceH = sourceImg.getHeight();
@@ -46,10 +46,11 @@ public class MyImage {
         testRGBArray = new int[3*520][451][3];
     }
 
-    public static void loadSourceImage(String path) {
+    public static void loadSourceImage(String sourceName) {
         try {
-            sourceImg = ImageIO.read(ImagePanel.class.getResource(path));
+            sourceImg = ImageIO.read(ImagePanel.class.getResource("/resources/images/" + sourceName + ".jpg"));
             System.out.println("image loaded");
+            System.out.println("sourceImg " + MyImage.sourceImg);
 
         } catch (IOException e) {
             System.out.println(e);
@@ -57,14 +58,14 @@ public class MyImage {
         }
     }
 
-    public static void loadTestImage(String path) {
+    public static void loadTestImage(String testName) {
         try {
-            testImg = ImageIO.read(ImagePanel.class.getResource(path));
+            testImg = ImageIO.read(ImagePanel.class.getResource("/resources/images/" + testName + ".jpg"));
             System.out.println("image loaded");
+            System.out.println("testImg " + MyImage.testImg);
 
         } catch (IOException e) {
             System.out.println(e);
-
         }
     }
 
@@ -124,7 +125,7 @@ public class MyImage {
         int stopY = 561;
         int startX;
         int stopX = 866;
-        int pixelCount = 0;
+//        int pixelCount = 0;
 //        h = 560;
 //        w = 865;
 
@@ -133,7 +134,7 @@ public class MyImage {
         for (startY = 40; startY < stopY; startY++){
 
             for (startX = 415; startX < stopX; startX++) {
-                pixelCount = pixelCount + 1;
+//                pixelCount = pixelCount + 1;
                 myColor = new Color(image.getRGB(startX,startY));
                 color[0] = myColor.getRed();
                 color[1] = myColor.getGreen();
@@ -144,7 +145,7 @@ public class MyImage {
                 }
             }
         }
-        print3DArray(rgbArray, 520, 450);
+//        print3DArray(rgbArray, 520, 450);
         return rgbArray;
     }
 

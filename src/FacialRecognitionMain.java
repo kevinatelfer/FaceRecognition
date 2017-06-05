@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 public class FacialRecognitionMain implements ActionListener {
     static BufferedImage imgMain = null;
     int[] rgbArrayMain;
-    String[] imageList= {"image1", "image2", "image3", "image4", "image5"};
+    String[] imageList= {"KevSource", "KevTest", "DadSource", "image4", "image5"};
     String choice;
 
     JFrame mainFrame;
@@ -52,6 +52,12 @@ public class FacialRecognitionMain implements ActionListener {
         title.setForeground(Color.CYAN);
         mainPanel.add(title);
 
+        if (ImageCalc.authenticated == 1){
+            mainPanel.setBackground(Color.green);
+        } else if (ImageCalc.authenticated == 2){
+            mainPanel.setBackground(Color.red);
+        }
+
         mainFrame.setVisible(true);
     }
 
@@ -59,15 +65,17 @@ public class FacialRecognitionMain implements ActionListener {
         if (e.getSource() == box1) {
             choice = box1.getSelectedItem().toString();
             System.out.println("choice " + choice);
+            MyImage.loadSourceImage(choice);
             setDrawTrue();
         }
         if (e.getSource() == box2) {
             choice = box2.getSelectedItem().toString();
             System.out.println("choice " + choice);
+            MyImage.loadTestImage(choice);
             setDrawTrue();
         }
-
     }
+
 
     public void setDrawTrue() {
         if (choice.equals("image1")) {
@@ -78,16 +86,26 @@ public class FacialRecognitionMain implements ActionListener {
 
     
     public static void main(String[] args) {
-        MyImage myImage = new MyImage();
         FacialRecognitionMain rec = new FacialRecognitionMain();
-        ImageCalc calc = new ImageCalc();
+        System.out.println("ready");
+        System.out.println("testImg" + MyImage.testImg);
+        System.out.println("sourceImg" + MyImage.sourceImg);
 
-        System.out.println(rec.rgbArrayMain);
+        if (MyImage.testImg != null || MyImage.sourceImg != null) {
+            System.out.println("entered if");
+            MyImage myImage = new MyImage();
+            ImageCalc calc = new ImageCalc();
 
-        myImage.readImageWithGetRGB(myImage.getSourceImg(), myImage.getSourceH(), myImage.getSourceW(), myImage.getSourceRGBArray());
-        System.out.println("Test Image:");
-        myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
-//        calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), myImage.getSourceH(), myImage.getSourceW());
+            System.out.println(rec.rgbArrayMain);
+
+            myImage.readImageWithGetRGB(myImage.getSourceImg(), myImage.getSourceH(), myImage.getSourceW(), myImage.getSourceRGBArray());
+            System.out.println("Test Image:");
+            myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
+            calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
+            FacialRecognitionMain recc = new FacialRecognitionMain();
 //        myImage.resizeDimensions();
+        } else {
+            System.out.println("if statement incomplete");
+        }
     }
 }
