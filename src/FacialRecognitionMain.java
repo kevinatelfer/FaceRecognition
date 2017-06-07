@@ -17,6 +17,7 @@ public class FacialRecognitionMain implements ActionListener {
     String choice1;
     String choice2;
     boolean finished;
+    boolean compareImages;
 
     JFrame mainFrame;
     ImagePanel mainPanel;
@@ -79,7 +80,7 @@ public class FacialRecognitionMain implements ActionListener {
         mainPanel.add(imageDeclined);
 
         imageApproved.setVisible(false);
-        imageDeclined.setVisible(true);
+        imageDeclined.setVisible(false);
 
         mainFrame.setVisible(true);
     }
@@ -96,6 +97,11 @@ public class FacialRecognitionMain implements ActionListener {
             System.out.println("choice " + choice2);
             MyImage.loadTestImage(choice2);
 //            setDrawTrue();
+        }
+        if (e.getSource() == compare) {
+            compareImages = true;
+            System.out.println("BUTTON PRESSED");
+            System.out.println(compareImages);
         }
     }
 
@@ -125,10 +131,15 @@ public class FacialRecognitionMain implements ActionListener {
         System.out.println("ready");
         System.out.println("testImg" + MyImage.testImg);
         System.out.println("sourceImg" + MyImage.sourceImg);
+        System.out.println("compare Images: " + rec.compareImages);
+
 
         do {
-            if (MyImage.testImg != null && MyImage.sourceImg != null) {
+            System.out.println(rec.compareImages);
+            if (rec.compareImages) {
                 System.out.println("entered if");
+                rec.imageApproved.setVisible(false);
+                rec.imageDeclined.setVisible(false);
                 rec.finished = true;
                 MyImage myImage = new MyImage();
                 ImageCalc calc = new ImageCalc();
@@ -140,11 +151,32 @@ public class FacialRecognitionMain implements ActionListener {
                 myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
                 calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
                 rec.changeBackgroundColor();
-//        myImage.resizeDimensions();
+                rec.compareImages = false;
+                rec.finished = false;
             }else {
                 System.out.println("select images");
             }
-        } while (!rec.finished);
+        } while(!rec.finished);
+
+//        do {
+//            if (MyImage.testImg != null && MyImage.sourceImg != null) {
+//                System.out.println("entered if");
+//                rec.finished = true;
+//                MyImage myImage = new MyImage();
+//                ImageCalc calc = new ImageCalc();
+//
+//                System.out.println(rec.rgbArrayMain);
+//
+//                myImage.readImageWithGetRGB(myImage.getSourceImg(), myImage.getSourceH(), myImage.getSourceW(), myImage.getSourceRGBArray());
+//                System.out.println("Test Image:");
+//                myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
+//                calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
+//                rec.changeBackgroundColor();
+////        myImage.resizeDimensions();
+//            }else {
+//                System.out.println("select images");
+//            }
+//        } while (!rec.finished);
 
 //        System.out.println("entered if");
 ////                rec.imagesChosen = true;
