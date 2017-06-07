@@ -14,15 +14,22 @@ public class FacialRecognitionMain implements ActionListener {
     static BufferedImage imgMain = null;
     int[] rgbArrayMain;
     String[] imageList= {"KevSource", "KevTest", "DadSource", "image4", "image5"};
-    String choice;
+    String choice1;
+    String choice2;
+    boolean finished;
 
     JFrame mainFrame;
     ImagePanel mainPanel;
     JComboBox box1;
     JComboBox box2;
     JLabel title;
+    JLabel imageApproved;
+    JLabel imageDeclined;
+    JButton compare;
 
-    static boolean draw1 = false;
+//    static boolean drawKevSource1 = false;
+//    static boolean drawKevTest1 = false;
+//    static boolean drawDadSource1 = false;
 
     public FacialRecognitionMain() {
         mainFrame = new JFrame();
@@ -46,42 +53,70 @@ public class FacialRecognitionMain implements ActionListener {
         mainPanel.add(box2);
         box2.addActionListener(this);
 
+        compare = new JButton("compare");
+        compare.setBounds(425,480,150,40);
+        compare.setFont(compare.getFont().deriveFont(20.0f));
+        compare.setForeground(Color.black);
+        mainPanel.add(compare);
+        compare.addActionListener(this);
+
         title = new JLabel("Face Authenticator");
         title.setBounds(320, 10, 450,40);
         title.setFont(title.getFont().deriveFont(40.0f));
         title.setForeground(Color.CYAN);
         mainPanel.add(title);
 
-        if (ImageCalc.authenticated == 1){
-            mainPanel.setBackground(Color.green);
-        } else if (ImageCalc.authenticated == 2){
-            mainPanel.setBackground(Color.red);
-        }
+        imageApproved = new JLabel("Face Approved");
+        imageApproved.setBounds(355, 575, 450,40);
+        imageApproved.setFont(imageApproved.getFont().deriveFont(40.0f));
+        imageApproved.setForeground(Color.black);
+        mainPanel.add(imageApproved);
+
+        imageDeclined = new JLabel("Face Declined");
+        imageDeclined.setBounds(360, 575, 450,40);
+        imageDeclined.setFont(imageDeclined.getFont().deriveFont(40.0f));
+        imageDeclined.setForeground(Color.black);
+        mainPanel.add(imageDeclined);
+
+        imageApproved.setVisible(false);
+        imageDeclined.setVisible(true);
 
         mainFrame.setVisible(true);
     }
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == box1) {
-            choice = box1.getSelectedItem().toString();
-            System.out.println("choice " + choice);
-            MyImage.loadSourceImage(choice);
-            setDrawTrue();
+            choice1 = box1.getSelectedItem().toString();
+            System.out.println("choice " + choice1);
+            MyImage.loadSourceImage(choice1);
+//            setDrawTrue();
         }
         if (e.getSource() == box2) {
-            choice = box2.getSelectedItem().toString();
-            System.out.println("choice " + choice);
-            MyImage.loadTestImage(choice);
-            setDrawTrue();
+            choice2 = box2.getSelectedItem().toString();
+            System.out.println("choice " + choice2);
+            MyImage.loadTestImage(choice2);
+//            setDrawTrue();
+        }
+    }
+
+    public void changeBackgroundColor() {
+        if (ImageCalc.authenticated == 1){
+            mainPanel.setBackground(Color.green);
+            imageApproved.setVisible(true);
+        } else if (ImageCalc.authenticated == 2){
+            mainPanel.setBackground(Color.red);
+            imageDeclined.setVisible(true);
         }
     }
 
 
-    public void setDrawTrue() {
-        if (choice.equals("image1")) {
-            draw1 = true;
-        }
-    }
+//    public void setDrawTrue() {
+//        if (choice1.equals("KevSource")) {
+//            drawKevSource1 = true;
+//        } else if(choice1.equals("KevTest")) {
+//            drawKevTest1 = true;
+//        }
+//    }
 
 
     
@@ -91,21 +126,38 @@ public class FacialRecognitionMain implements ActionListener {
         System.out.println("testImg" + MyImage.testImg);
         System.out.println("sourceImg" + MyImage.sourceImg);
 
-        if (MyImage.testImg != null || MyImage.sourceImg != null) {
-            System.out.println("entered if");
-            MyImage myImage = new MyImage();
-            ImageCalc calc = new ImageCalc();
+        do {
+            if (MyImage.testImg != null && MyImage.sourceImg != null) {
+                System.out.println("entered if");
+                rec.finished = true;
+                MyImage myImage = new MyImage();
+                ImageCalc calc = new ImageCalc();
 
-            System.out.println(rec.rgbArrayMain);
+                System.out.println(rec.rgbArrayMain);
 
-            myImage.readImageWithGetRGB(myImage.getSourceImg(), myImage.getSourceH(), myImage.getSourceW(), myImage.getSourceRGBArray());
-            System.out.println("Test Image:");
-            myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
-            calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
-            FacialRecognitionMain recc = new FacialRecognitionMain();
+                myImage.readImageWithGetRGB(myImage.getSourceImg(), myImage.getSourceH(), myImage.getSourceW(), myImage.getSourceRGBArray());
+                System.out.println("Test Image:");
+                myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
+                calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
+                rec.changeBackgroundColor();
 //        myImage.resizeDimensions();
-        } else {
-            System.out.println("if statement incomplete");
-        }
+            }else {
+                System.out.println("select images");
+            }
+        } while (!rec.finished);
+
+//        System.out.println("entered if");
+////                rec.imagesChosen = true;
+//        MyImage myImage = new MyImage();
+//        ImageCalc calc = new ImageCalc();
+//
+//        System.out.println(rec.rgbArrayMain);
+//
+//        myImage.readImageWithGetRGB(myImage.getSourceImg(), myImage.getSourceH(), myImage.getSourceW(), myImage.getSourceRGBArray());
+//        System.out.println("Test Image:");
+//        myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
+//        calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
+////                FacialRecognitionMain recc = new FacialRecognitionMain();
+
     }
 }

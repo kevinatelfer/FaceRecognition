@@ -19,12 +19,13 @@ public class ImagePanel extends JPanel {
         g.drawLine(500,0,500,700);
         g.drawLine(250,0,250,700);
         g.drawLine(750,0,750,700);
-        if (FacialRecognitionMain.draw1) {
-//            myImage.loadImage("/resources/images/ThreeColor.jpg");
-//            g.drawImage(MyImage.sourceImg, 50, 200, MyImage.resizeSourceW, MyImage.resizeSourceH, null);
-//            System.out.println("rw " + MyImage.resizeSourceW);
-//            System.out.println("rw" + MyImage.resizeSourceH);
-        }
+        g.drawImage(MyImage.sourceImg, 50, 200, 400, 225, null);
+        g.drawImage(MyImage.testImg, 550, 200, 400, 225, null);
+//        if (FacialRecognitionMain.drawKevSource1) {
+//            g.drawImage(MyImage.sourceImg, 50, 200, 400, 225, null);
+//        } else if (FacialRecognitionMain.drawKevTest1) {
+//            g.drawImage(MyImage.sourceImg, 50, 200, 400, 225, null);
+//        }
     }
 
 //    public void drawTestImg(Graphics g, BufferedImage image) {
