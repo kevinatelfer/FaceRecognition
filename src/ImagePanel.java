@@ -17,8 +17,23 @@ public class ImagePanel extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 //        g.drawLine(500,0,500,700);
-//        g.drawLine(250,0,250,700);
+//        g.drawLine(0,312, 1000,312);
 //        g.drawLine(750,0,750,700);
+//        g.drawLine(250,0,250,700);
+
+        g.drawLine(49,199,49,425);
+        g.drawLine(450,200,450,425);
+        g.drawLine(549,199,549,425);
+        g.drawLine(950,200,950,425);
+
+        g.drawLine(50,199,450,199);
+        g.drawLine(50,425,450,425);
+        g.drawLine(550,199,950,199);
+        g.drawLine(550,425,950,425);
+
+
+
+
         g.drawImage(MyImage.sourceImg, 50, 200, 400, 225, null);
         g.drawImage(MyImage.testImg, 550, 200, 400, 225, null);
 //        if (FacialRecognitionMain.drawKevSource1) {

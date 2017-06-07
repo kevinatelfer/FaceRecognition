@@ -27,6 +27,8 @@ public class FacialRecognitionMain implements ActionListener {
     JLabel imageApproved;
     JLabel imageDeclined;
     JButton compare;
+    JLabel imagePlaceholder1;
+    JLabel imagePlaceholder2;
 
 //    static boolean drawKevSource1 = false;
 //    static boolean drawKevTest1 = false;
@@ -41,6 +43,7 @@ public class FacialRecognitionMain implements ActionListener {
         mainPanel = new ImagePanel();
         mainFrame.setContentPane(mainPanel);
         mainPanel.setBackground(Color.lightGray);
+//        mainPanel.setBackground(new Color(74,124,249));
 
         mainFrame.setLayout(null);
 
@@ -54,18 +57,31 @@ public class FacialRecognitionMain implements ActionListener {
         mainPanel.add(box2);
         box2.addActionListener(this);
 
-        compare = new JButton("compare");
+        compare = new JButton("Compare");
         compare.setBounds(425,480,150,40);
         compare.setFont(compare.getFont().deriveFont(20.0f));
-        compare.setForeground(Color.black);
+//        compare.setBackground(new Color(66,83,244));
+        compare.setForeground(Color.darkGray);
         mainPanel.add(compare);
         compare.addActionListener(this);
 
         title = new JLabel("Face Authenticator");
-        title.setBounds(320, 10, 450,40);
+        title.setBounds(314, 17, 450,40);
         title.setFont(title.getFont().deriveFont(40.0f));
-        title.setForeground(Color.CYAN);
+        title.setForeground(Color.darkGray);
         mainPanel.add(title);
+
+        imagePlaceholder1 = new JLabel("Reference Image");
+        imagePlaceholder1.setBounds(115,283,450,50);
+        imagePlaceholder1.setFont(imagePlaceholder1.getFont().deriveFont(35.0f));
+        imagePlaceholder1.setForeground(Color.gray);
+        mainPanel.add(imagePlaceholder1);
+
+        imagePlaceholder2 = new JLabel("Test Image");
+        imagePlaceholder2.setBounds(660,283,450,50);
+        imagePlaceholder2.setFont(imagePlaceholder2.getFont().deriveFont(35.0f));
+        imagePlaceholder2.setForeground(Color.gray);
+        mainPanel.add(imagePlaceholder2);
 
         imageApproved = new JLabel("Face Approved");
         imageApproved.setBounds(355, 575, 450,40);
@@ -90,12 +106,14 @@ public class FacialRecognitionMain implements ActionListener {
             choice1 = box1.getSelectedItem().toString();
             System.out.println("choice " + choice1);
             MyImage.loadSourceImage(choice1);
+            imagePlaceholder1.setVisible(false);
 //            setDrawTrue();
         }
         if (e.getSource() == box2) {
             choice2 = box2.getSelectedItem().toString();
             System.out.println("choice " + choice2);
             MyImage.loadTestImage(choice2);
+            imagePlaceholder2.setVisible(false);
 //            setDrawTrue();
         }
         if (e.getSource() == compare) {
@@ -135,7 +153,7 @@ public class FacialRecognitionMain implements ActionListener {
 
 
         do {
-            System.out.println(rec.compareImages);
+//            System.out.println(rec.compareImages);
             if (rec.compareImages) {
                 System.out.println("entered if");
                 rec.imageApproved.setVisible(false);
