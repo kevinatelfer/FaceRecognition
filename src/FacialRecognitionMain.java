@@ -167,10 +167,11 @@ public class FacialRecognitionMain implements ActionListener {
                 myImage.readImageWithGetRGB(myImage.getSourceImg(), myImage.getSourceH(), myImage.getSourceW(), myImage.getSourceRGBArray());
                 System.out.println("Test Image:");
                 myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
-                calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
+//                calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
+                calc.vectorCompare(myImage.getSourceRGBArray(),myImage.getTestRGBArray(), 520,451);
                 rec.changeBackgroundColor();
                 rec.compareImages = false;
-                rec.finished = false;
+//                rec.finished = false;
             }else {
                 System.out.println("select images");
             }
