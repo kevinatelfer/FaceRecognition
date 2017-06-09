@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ccacaf08-2bb2-4643-93f6-f02e278bd78c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FacialRecognitionMain.java" afterPath="$PROJECT_DIR$/src/FacialRecognitionMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ImagePanel.java" afterPath="$PROJECT_DIR$/src/ImagePanel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FacialRecognitionMain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FacialRecognitionMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="92" column="44" lean-forward="true" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+            <state relative-caret-position="302">
+              <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1497024537200" expanded="true" signature="0:229" ph="..." />
@@ -56,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyImage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyImage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="55" column="34" lean-forward="true" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
               <folding>
                 <marker date="1497025826969" expanded="false" signature="2214:2735" ph="..." />
                 <marker date="1497025826969" expanded="false" signature="4329:5934" ph="..." />
@@ -1093,16 +1091,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
+    <entry file="file://$PROJECT_DIR$/src/MyImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="92" column="44" lean-forward="true" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+        <state relative-caret-position="270">
+          <caret line="55" column="34" lean-forward="true" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1497024537200" expanded="true" signature="0:229" ph="..." />
-            <marker date="1497024537200" expanded="false" signature="7797:8438" ph="..." />
-            <marker date="1497024537200" expanded="false" signature="8666:9659" ph="..." />
-            <marker date="1497024537200" expanded="false" signature="9663:10372" ph="..." />
+            <marker date="1497025826969" expanded="false" signature="2214:2735" ph="..." />
+            <marker date="1497025826969" expanded="false" signature="4329:5934" ph="..." />
+            <marker date="1497025826969" expanded="false" signature="6367:6653" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1118,14 +1114,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyImage.java">
+    <entry file="file://$PROJECT_DIR$/src/FacialRecognitionMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="302">
+          <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
           <folding>
-            <marker date="1497025826969" expanded="false" signature="2214:2735" ph="..." />
-            <marker date="1497025826969" expanded="false" signature="4329:5934" ph="..." />
-            <marker date="1497025826969" expanded="false" signature="6367:6653" ph="..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1497024537200" expanded="true" signature="0:229" ph="..." />
+            <marker date="1497024537200" expanded="false" signature="7797:8438" ph="..." />
+            <marker date="1497024537200" expanded="false" signature="8666:9659" ph="..." />
+            <marker date="1497024537200" expanded="false" signature="9663:10372" ph="..." />
           </folding>
         </state>
       </provider>
