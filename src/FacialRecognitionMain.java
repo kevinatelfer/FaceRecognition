@@ -89,17 +89,17 @@ public class FacialRecognitionMain implements ActionListener {
         avgPixTitle.setForeground(Color.darkGray);
         mainPanel.add(avgPixTitle);
 
-//        angleDiff = new JLabel(Integer.toString(angleP));
-//        angleDiff.setBounds(720,520,500,40);
-//        angleDiff.setFont(angleDiff.getFont().deriveFont(20.0f));
-//        angleDiff.setForeground(Color.darkGray);
-//        mainPanel.add(angleDiff);
+        angleDiff = new JLabel(Integer.toString(angleP) + " degrees");
+        angleDiff.setBounds(140,540,500,40);
+        angleDiff.setFont(angleDiff.getFont().deriveFont(20.0f));
+        angleDiff.setForeground(Color.darkGray);
+        mainPanel.add(angleDiff);
 
-//        meanPix = new JLabel(Integer.toString(meanDiffP));
-//        meanPix.setBounds(120,520,500,40);
-//        meanPix.setFont(meanPix.getFont().deriveFont(20.0f));
-//        meanPix.setForeground(Color.darkGray);
-//        mainPanel.add(meanPix);
+        meanPix = new JLabel(Integer.toString(meanDiffP));
+        meanPix.setBounds(760,540,500,40);
+        meanPix.setFont(meanPix.getFont().deriveFont(20.0f));
+        meanPix.setForeground(Color.darkGray);
+        mainPanel.add(meanPix);
 
         imagePlaceholder1 = new JLabel("Reference Image");
         imagePlaceholder1.setBounds(115,283,450,50);
@@ -209,18 +209,20 @@ public class FacialRecognitionMain implements ActionListener {
                 calc.vectorCompare(myImage.getSourceRGBArray(),myImage.getTestRGBArray(), 520,451);
                 rec.changeBackgroundColor();
                 rec.updateCalcInfo();
+                rec.angleDiff.setText(Integer.toString(rec.angleP) + " degrees");
+                rec.meanPix.setText(Integer.toString(rec.meanDiffP));
 
-                rec.meanPix = new JLabel(Integer.toString(rec.meanDiffP));
-                rec.meanPix.setBounds(160,530,50,20);
-                rec.meanPix.setFont(rec.meanPix.getFont().deriveFont(20.0f));
-                rec.meanPix.setForeground(Color.darkGray);
-                rec.mainPanel.add(rec.meanPix);
-
-                rec.angleDiff = new JLabel(Integer.toString(rec.angleP));
-                rec.angleDiff.setBounds(770,530,40,20);
-                rec.angleDiff.setFont(rec.angleDiff.getFont().deriveFont(20.0f));
-                rec.angleDiff.setForeground(Color.darkGray);
-                rec.mainPanel.add(rec.angleDiff);
+//                rec.meanPix = new JLabel(Integer.toString(rec.meanDiffP));
+//                rec.meanPix.setBounds(160,530,50,20);
+//                rec.meanPix.setFont(rec.meanPix.getFont().deriveFont(20.0f));
+//                rec.meanPix.setForeground(Color.darkGray);
+//                rec.mainPanel.add(rec.meanPix);
+//
+//                rec.angleDiff = new JLabel(Integer.toString(rec.angleP));
+//                rec.angleDiff.setBounds(770,530,40,20);
+//                rec.angleDiff.setFont(rec.angleDiff.getFont().deriveFont(20.0f));
+//                rec.angleDiff.setForeground(Color.darkGray);
+//                rec.mainPanel.add(rec.angleDiff); create JLabels in main
 
                 rec.compareImages = false;
                 rec.finished = false;
