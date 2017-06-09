@@ -3,7 +3,7 @@
  */
 public class ImageCalc {
     int colorDiff;
-    int meanDiff;
+    static int meanDiff;
     int pixels = 234000;
     static int authenticated = 0;
     double dotProduct;
@@ -12,7 +12,7 @@ public class ImageCalc {
     double magProduct;
 //    int magProductInt;
     double devided;
-    double angle;
+    static double angle;
 
     public void vectorCompare(int[][][] source, int[][][] test, int h, int w) {
         System.out.println("vectorCompare start: ");

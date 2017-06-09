@@ -16,10 +16,10 @@ public class ImagePanel extends JPanel {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-//        g.drawLine(500,0,500,700);
-//        g.drawLine(0,312, 1000,312);
-//        g.drawLine(750,0,750,700);
-//        g.drawLine(250,0,250,700);
+        g.drawLine(500,0,500,700);
+        g.drawLine(0,500, 1000,500);
+        g.drawLine(750,0,750,700);
+        g.drawLine(250,0,250,700);
 
         g.drawLine(49,199,49,425);
         g.drawLine(450,200,450,425);

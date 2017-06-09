@@ -18,6 +18,8 @@ public class FacialRecognitionMain implements ActionListener {
     String choice2;
     boolean finished;
     boolean compareImages;
+    int angleP;
+    int meanDiffP;
 
     JFrame mainFrame;
     ImagePanel mainPanel;
@@ -29,6 +31,10 @@ public class FacialRecognitionMain implements ActionListener {
     JButton compare;
     JLabel imagePlaceholder1;
     JLabel imagePlaceholder2;
+    JLabel angleTitle;
+    JLabel avgPixTitle;
+    JLabel angleDiff;
+    JLabel meanPix;
 
 //    static boolean drawKevSource1 = false;
 //    static boolean drawKevTest1 = false;
@@ -70,6 +76,30 @@ public class FacialRecognitionMain implements ActionListener {
         title.setFont(title.getFont().deriveFont(40.0f));
         title.setForeground(Color.darkGray);
         mainPanel.add(title);
+
+        angleTitle = new JLabel("Vector Angle Difference");
+        angleTitle.setBounds(40,500,500,40);
+        angleTitle.setFont(angleTitle.getFont().deriveFont(25.0f));
+        angleTitle.setForeground(Color.darkGray);
+        mainPanel.add(angleTitle);
+
+        avgPixTitle = new JLabel("Mean Difference in Color");
+        avgPixTitle.setBounds(650,500,500,40);
+        avgPixTitle.setFont(avgPixTitle.getFont().deriveFont(25.0f));
+        avgPixTitle.setForeground(Color.darkGray);
+        mainPanel.add(avgPixTitle);
+
+//        angleDiff = new JLabel(Integer.toString(angleP));
+//        angleDiff.setBounds(720,520,500,40);
+//        angleDiff.setFont(angleDiff.getFont().deriveFont(20.0f));
+//        angleDiff.setForeground(Color.darkGray);
+//        mainPanel.add(angleDiff);
+
+//        meanPix = new JLabel(Integer.toString(meanDiffP));
+//        meanPix.setBounds(120,520,500,40);
+//        meanPix.setFont(meanPix.getFont().deriveFont(20.0f));
+//        meanPix.setForeground(Color.darkGray);
+//        mainPanel.add(meanPix);
 
         imagePlaceholder1 = new JLabel("Reference Image");
         imagePlaceholder1.setBounds(115,283,450,50);
@@ -133,6 +163,14 @@ public class FacialRecognitionMain implements ActionListener {
         }
     }
 
+    public void updateCalcInfo() {
+        angleP = (int) ImageCalc.angle;
+        meanDiffP = ImageCalc.meanDiff;
+        System.out.println("angleP " + angleP);
+        System.out.println("meanDiffP " + meanDiffP);
+    }
+
+
 
 //    public void setDrawTrue() {
 //        if (choice1.equals("KevSource")) {
@@ -155,7 +193,7 @@ public class FacialRecognitionMain implements ActionListener {
         do {
 //            System.out.println(rec.compareImages);
             if (rec.compareImages) {
-                System.out.println("entered if");
+//                System.out.println("entered if");
                 rec.imageApproved.setVisible(false);
                 rec.imageDeclined.setVisible(false);
                 rec.finished = true;
@@ -165,13 +203,27 @@ public class FacialRecognitionMain implements ActionListener {
                 System.out.println(rec.rgbArrayMain);
 
                 myImage.readImageWithGetRGB(myImage.getSourceImg(), myImage.getSourceH(), myImage.getSourceW(), myImage.getSourceRGBArray());
-                System.out.println("Test Image:");
+//                System.out.println("Test Image:");
                 myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
-//                calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
+                calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
                 calc.vectorCompare(myImage.getSourceRGBArray(),myImage.getTestRGBArray(), 520,451);
                 rec.changeBackgroundColor();
+                rec.updateCalcInfo();
+
+                rec.meanPix = new JLabel(Integer.toString(rec.meanDiffP));
+                rec.meanPix.setBounds(160,530,50,20);
+                rec.meanPix.setFont(rec.meanPix.getFont().deriveFont(20.0f));
+                rec.meanPix.setForeground(Color.darkGray);
+                rec.mainPanel.add(rec.meanPix);
+
+                rec.angleDiff = new JLabel(Integer.toString(rec.angleP));
+                rec.angleDiff.setBounds(770,530,40,20);
+                rec.angleDiff.setFont(rec.angleDiff.getFont().deriveFont(20.0f));
+                rec.angleDiff.setForeground(Color.darkGray);
+                rec.mainPanel.add(rec.angleDiff);
+
                 rec.compareImages = false;
-//                rec.finished = false;
+                rec.finished = false;
             }else {
                 System.out.println("select images");
             }
@@ -209,6 +261,5 @@ public class FacialRecognitionMain implements ActionListener {
 //        myImage.readImageWithGetRGB(myImage.getTestImg(), myImage.getTestH(),myImage.getTestW(), myImage.getTestRGBArray());
 //        calc.simpleCompare(myImage.getSourceRGBArray(), myImage.getTestRGBArray(), 520, 451);
 ////                FacialRecognitionMain recc = new FacialRecognitionMain();
-
     }
 }
