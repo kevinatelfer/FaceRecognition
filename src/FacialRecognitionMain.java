@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 public class FacialRecognitionMain implements ActionListener {
     static BufferedImage imgMain = null;
     int[] rgbArrayMain;
-    String[] imageList= {"KevSource", "KevTest", "DadSource", "image4", "image5"};
+    String[] imageList= {"KevSource", "KevTest", "DadSource", "GuestOne", "GuestTwo", "GuestThree"};
     String choice1;
     String choice2;
     boolean finished;
@@ -137,14 +137,12 @@ public class FacialRecognitionMain implements ActionListener {
             System.out.println("choice " + choice1);
             MyImage.loadSourceImage(choice1);
             imagePlaceholder1.setVisible(false);
-//            setDrawTrue();
         }
         if (e.getSource() == box2) {
             choice2 = box2.getSelectedItem().toString();
             System.out.println("choice " + choice2);
             MyImage.loadTestImage(choice2);
             imagePlaceholder2.setVisible(false);
-//            setDrawTrue();
         }
         if (e.getSource() == compare) {
             compareImages = true;

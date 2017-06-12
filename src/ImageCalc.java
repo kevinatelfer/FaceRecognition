@@ -2,6 +2,7 @@
  * Created by block7 on 4/10/17.
  */
 public class ImageCalc {
+//    long colorDiff;
     int colorDiff;
     static int meanDiff;
     int pixels = 234000;
@@ -41,11 +42,16 @@ public class ImageCalc {
             for (int j = 0; j < w; j++) {
                 for (int k = 0; k < 3; k++ ) {
                     colorDiff = colorDiff + (source[i][j][k] - test[i][j][k])*(source[i][j][k] - test[i][j][k]);
+//                    System.out.println(colorDiff);
 
                 }
             }
         }
+        System.out.println("pixels " + pixels);
+        System.out.println("final color diff" + colorDiff);
         meanDiff = colorDiff/pixels;
+//        meanDiff = (int) colorDiff/pixels;
+        System.out.println("real mean " + meanDiff);
         System.out.println(colorDiff);
         if (meanDiff > 2500) {
             authenticated = 2;
